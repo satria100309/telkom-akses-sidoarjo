@@ -14,9 +14,10 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 85px;
+    scroll-padding-top: 72px;
 }
 
 body {
@@ -25,12 +26,12 @@ body {
     overflow-x: hidden;
 }
 
+/* Posisi section menyesuaikan navbar fixed */
 section {
-    scroll-margin-top: 72px;
+    scroll-margin-top: 0;
 }
 
-/* ================= NAVBAR ================= */
-
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;

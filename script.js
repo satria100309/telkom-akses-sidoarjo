@@ -1,35 +1,116 @@
-// 1. Menandai menu navbar yang aktif sesuai posisi scroll halaman
-const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll(".nav-item:not(.btn-keluar)");
 
-window.addEventListener("scroll", () => {
-    let current = "";
+// ===============================
+// 1. NAVBAR ACTIVE MENU
+// ===============================
+
+const sections = document.querySelectorAll("section");
+
+const navItems = document.querySelectorAll(
+    ".nav-item:not(.btn-keluar)"
+);
+
+function updateActiveMenu() {
+
+    let current = "home";
 
     sections.forEach((section) => {
+
         const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 160) {
+
+        if (window.scrollY >= sectionTop - 160) {
             current = section.getAttribute("id");
         }
+
     });
 
     navItems.forEach((item) => {
+
         item.classList.remove("active");
+
         if (item.getAttribute("href") === `#${current}`) {
             item.classList.add("active");
         }
+
     });
-});
 
-// 2. Placeholder tombol DASHBOARD (tidak mengalihkan halaman sebelum kamu pasang link)
+}
+
+window.addEventListener("scroll", updateActiveMenu);
+
+window.addEventListener("load", updateActiveMenu);
+
+
+// ===============================
+// 2. TOMBOL DASHBOARD
+// ===============================
+
 function klikDashboard(event) {
-    // Jika href masih "#", tahan agar layar tidak melompat ke atas
-    if (event.currentTarget.getAttribute("href") === "#") {
+
+    const link = event.currentTarget.getAttribute("href");
+
+    if (link === "#") {
+
         event.preventDefault();
+
+        alert(
+            "Halaman Dashboard belum dihubungkan. " +
+            "Silakan pasang alamat halaman Dashboard terlebih dahulu."
+        );
+
     }
+
 }
 
-// 3. Simulasi tombol Keluar di navbar
+
+// ===============================
+// 3. TOMBOL KELUAR
+// ===============================
+
 function konfirmasiKeluar(event) {
+
     event.preventDefault();
-    alert("Tombol Keluar diklik. Nanti bisa dihubungkan ke halaman Login.");
+
+    const konfirmasi = confirm(
+        "Apakah kamu yakin ingin keluar dari halaman ini?"
+    );
+
+    if (konfirmasi) {
+
+        alert(
+            "Tombol Keluar berhasil dijalankan. " +
+            "Silakan hubungkan dengan halaman Login."
+        );
+
+    }
+
 }
+
+
+// ===============================
+// 4. SMOOTH SCROLL NAVIGASI
+// ===============================
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+
+    link.addEventListener("click", function(event) {
+
+        const targetId = this.getAttribute("href");
+
+        if (targetId === "#") return;
+
+        const target = document.querySelector(targetId);
+
+        if (target) {
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    });
+
+});

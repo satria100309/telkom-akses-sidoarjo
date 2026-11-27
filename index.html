@@ -1,226 +1,403 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telkom Akses - Branch Sidoarjo</title>
-    <!-- Kombinasi Font Modern & Tegas -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- NAVBAR MAROON DENGAN LOGO LEBIH BESAR -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="brand-logo">
-                <img src="logo-putih.jpg" alt="Telkom Indonesia">
-            </a>
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="nav-container">
 
-            <nav class="nav-links">
-                <a href="#home" class="nav-item active">Home</a>
-                <a href="#about" class="nav-item">About</a>
-                <a href="#dashboard" class="nav-item">Dashboard</a>
-                <a href="#" class="nav-item btn-keluar" onclick="konfirmasiKeluar(event)">Keluar</a>
-            </nav>
-        </div>
-    </header>
+        <a href="#home" class="brand-logo-cropped" aria-label="Telkom Indonesia"></a>
 
-    <!-- BAGIAN 1: HOME (HERO LEBIH HIDUP + WATERMARK LOGO + SLOGAN ELEGAN) -->
-    <section id="home" class="hero-section">
-        <div class="hero-batik-banner">
-            <!-- Latar Batik Cerah -->
-            <div class="batik-light-bg"></div>
-            
-            <!-- Dekorasi Watermark Logo Telkom di Latar Belakang agar Tidak Sepi -->
-            <div class="hero-bg-emblem" aria-hidden="true">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M95,70 C85,35 105,15 115,45 C122,12 145,10 142,48 C158,18 180,28 162,62 C185,48 198,68 170,88 C192,92 188,115 155,112 C135,125 100,115 95,70 Z" fill="#EE2E24"/>
-                    <circle cx="92" cy="118" r="46" fill="none" stroke="#64748B" stroke-width="22"/>
-                    <path d="M92,72 A46,46 0 0,1 136,105" fill="none" stroke="#FFFFFF" stroke-width="22"/>
-                </svg>
+        <nav class="nav-links">
+            <a href="#home" class="nav-item active">Home</a>
+            <a href="#about" class="nav-item">About</a>
+            <a href="#dashboard" class="nav-item">Dashboard</a>
+            <a href="#" class="nav-item btn-keluar" onclick="konfirmasiKeluar(event)">Keluar</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- HOME / HERO -->
+<section id="home" class="hero-section">
+
+    <div class="hero-batik-bg"></div>
+    <div class="hero-orb hero-orb-one"></div>
+    <div class="hero-orb hero-orb-two"></div>
+
+    <div class="hero-main">
+
+        <!-- TEXT LEFT -->
+        <div class="hero-copy">
+
+            <div class="hero-eyebrow">
+                <span class="eyebrow-dot"></span>
+                TELKOM AKSES
+                <span class="eyebrow-divider">/</span>
+                BRANCH SIDOARJO
             </div>
 
-            <div class="hero-title-box">
-                <div class="hero-pill">
-                    <span class="pulse-dot"></span> PT TELKOM AKSES • REGIONAL JAWA TIMUR
-                </div>
-                <h1>
-                    <span class="welcome-small">WELCOME TO</span>
-                    <span class="company-main">TELKOM AKSES</span>
-                    <span class="branch-sub">BRANCH SIDOARJO</span>
-                </h1>
-            </div>
-        </div>
+            <h1 class="hero-title">
+                Menghubungkan<br>
+                <span class="hero-title-red">Sidoarjo.</span><br>
+                Membangun Masa<br class="desktop-break">
+                Depan Digital.
+            </h1>
 
-        <!-- Bar Slogan yang Lebih Berkarakter -->
-        <div class="tagline-bar">
-            <div class="tagline-wrapper">
-                <span class="line-accent"></span>
-                <p class="slogan-text">“The World In Your Hand”</p>
-                <span class="line-accent"></span>
-            </div>
-        </div>
-    </section>
+            <p class="hero-description">
+                Mendukung konektivitas melalui pembangunan dan
+                pengelolaan infrastruktur jaringan akses broadband
+                yang andal.
+            </p>
 
-    <!-- BAGIAN 2: BANNER DASHBOARD (TANPA KARTU BAWAH, SIAP DIPASANG LINK) -->
-    <section id="dashboard" class="dashboard-wrapper">
-        <div class="dashboard-banner">
-            <div class="batik-dark-bg"></div>
-            
-            <div class="banner-content">
-                <div class="banner-text">
-                    <span class="banner-kicker">SISTEM TERINTEGRASI</span>
-                    <h2>Integrated Operational<br>Monitoring &amp; Performance<br>Dashboard</h2>
-                </div>
+            <div class="hero-actions">
 
-                <div class="banner-action">
-                    <span class="eksplore-text">EKSPLORE</span>
-                    <!-- Ganti href="#" dengan link dashboard tujuan kamu nanti -->
-                    <a href="#" class="btn-dashboard-pill" onclick="klikDashboard(event)">
-                        DASHBOARD <i class="fas fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
+                <a href="#dashboard" class="hero-btn-primary">
+                    Jelajahi Dashboard
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <a href="#about" class="hero-btn-secondary">
+                    Kenali Kami
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+
             </div>
 
-            <!-- Ikon Telkom Tanpa Background (Vektor Tajam & Transparan) -->
-            <div class="floating-telkom-svg">
-                <svg viewBox="0 0 210 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Jari-jari Merah -->
-                    <path d="M88,78 C76,38 98,14 112,48 C120,10 148,8 144,52 C164,16 190,28 168,68 C195,52 210,76 178,98 C204,104 198,130 160,126 C135,140 95,128 88,78 Z" fill="#EE2E24"/>
-                    <!-- Lingkaran Abu-abu -->
-                    <circle cx="84" cy="126" r="52" fill="none" stroke="#6D6E71" stroke-width="25"/>
-                    <!-- Lengkungan Putih di Bagian Irisan -->
-                    <path d="M84,74 A52,52 0 0,1 134,112" fill="none" stroke="#FFFFFF" stroke-width="25"/>
-                </svg>
-            </div>
-        </div>
-    </section>
+            <div class="hero-highlights">
 
-    <!-- BAGIAN 3: ABOUT (LEBIH LENGKAP & KAYA INFORMASI) -->
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <div class="about-header">
-                <span class="sub-badge">PROFIL PERUSAHAAN</span>
-                <h2>Tentang Telkom Akses Branch Sidoarjo</h2>
-                <p class="about-lead">
-                    Ujung tombak pembangunan dan pengelolaan infrastruktur jaringan broadband fiber optik untuk mendukung konektivitas digital masyarakat, industri, dan pemerintahan di Kabupaten Sidoarjo.
-                </p>
-                <div class="red-divider"></div>
-            </div>
-
-            <!-- Baris 1: Visi & Misi -->
-            <div class="vm-grid">
-                <div class="about-box">
-                    <div class="box-title">
-                        <div class="icon-circle"><i class="fas fa-eye"></i></div>
-                        <h3>Visi Perusahaan</h3>
-                    </div>
-                    <p>
-                        Menjadi perusahaan penyedia layanan konstruksi dan pengelolaan infrastruktur jaringan akses telekomunikasi terdepan, terpercaya, dan berstandar global di wilayah Sidoarjo dan sekitarnya.
-                    </p>
-                </div>
-
-                <div class="about-box">
-                    <div class="box-title">
-                        <div class="icon-circle"><i class="fas fa-bullseye"></i></div>
-                        <h3>Misi Perusahaan</h3>
-                    </div>
-                    <ul>
-                        <li>Menghadirkan layanan pemasangan dan pemeliharaan jaringan fiber optik yang cepat, handal, dan berkualitas tinggi.</li>
-                        <li>Mendukung percepatan transformasi digital bagi pelanggan ritel, UMKM, hingga kawasan industri di Kabupaten Sidoarjo.</li>
-                        <li>Mengembangkan sumber daya manusia teknisi yang profesional, sigap, dan mengutamakan keselamatan kerja (K3).</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Baris 2: Sejarah Singkat -->
-            <div class="about-box history-box">
-                <div class="box-title">
-                    <div class="icon-circle maroon-icon"><i class="fas fa-landmark"></i></div>
-                    <h3>Sejarah &amp; Peran Strategis Branch Sidoarjo</h3>
-                </div>
-                <p>
-                    PT Telkom Akses (PTTA) didirikan pada 12 Desember 2012 sebagai anak perusahaan PT Telkom Indonesia (Persero) Tbk yang berfokus pada penyediaan layanan konstruksi pembangunan dan pengelolaan infrastruktur jaringan. Kehadiran <strong>Telkom Akses Branch Sidoarjo</strong> menjadi pilar penting dalam mengawal modernisasi jaringan kabel tembaga menuju fiber optik (FTTH) secara menyeluruh, sekaligus memastikan ketersediaan layanan internet berkecepatan tinggi di seluruh kecamatan wilayah Sidoarjo.
-                </p>
-            </div>
-
-            <!-- Baris 3: Fokus Layanan & Operasional (Tambahan Konten) -->
-            <div class="services-section">
-                <h3 class="sub-section-heading">Fokus Layanan &amp; Operasional</h3>
-                <div class="services-grid">
-                    <div class="service-card">
+                <div class="hero-highlight">
+                    <span class="highlight-icon">
                         <i class="fas fa-network-wired"></i>
-                        <h4>Pembangunan Jaringan (Deployment)</h4>
-                        <p>Perluasan jaringan kabel fiber optik (ODC, ODP, dan jaringan distribusi) untuk menjangkau area perumahan dan kawasan bisnis baru.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-screwdriver-wrench"></i>
-                        <h4>Pasang Baru (Provisioning)</h4>
-                        <p>Instalasi dan aktivasi layanan internet broadband pelanggan secara cepat, rapi, dan sesuai standar kualitas Telkom Group.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-shield-halved"></i>
-                        <h4>Pemeliharaan &amp; Assurance</h4>
-                        <p>Penanganan gangguan jaringan secara proaktif dan pemeliharaan berkala guna menjaga stabilitas koneksi 24/7.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-diagram-project"></i>
-                        <h4>Manage Service Infrastruktur</h4>
-                        <p>Pengelolaan perangkat aktif dan pasif jaringan akses secara terukur untuk meminimalkan potensi gangguan massal.</p>
-                    </div>
+                    </span>
+
+                    <span>
+                        <strong>Infrastruktur</strong>
+                        <small>Fiber Optik</small>
+                    </span>
                 </div>
+
+                <span class="highlight-separator"></span>
+
+                <div class="hero-highlight">
+                    <span class="highlight-icon">
+                        <i class="fas fa-map-location-dot"></i>
+                    </span>
+
+                    <span>
+                        <strong>Area Layanan</strong>
+                        <small>Sidoarjo &amp; Sekitarnya</small>
+                    </span>
+                </div>
+
             </div>
 
-            <!-- Baris 4: Nilai Utama Budaya Kerja (AKHLAK) -->
-            <div class="values-banner">
-                <div class="values-title">
-                    <span>CORE VALUES BUMN</span>
-                    <h3>Budaya Kerja AKHLAK</h3>
-                </div>
-                <div class="akhlak-pills">
-                    <div class="akhlak-item"><strong>A</strong>manah</div>
-                    <div class="akhlak-item"><strong>K</strong>ompeten</div>
-                    <div class="akhlak-item"><strong>H</strong>armonis</div>
-                    <div class="akhlak-item"><strong>L</strong>oyal</div>
-                    <div class="akhlak-item"><strong>A</strong>daptif</div>
-                    <div class="akhlak-item"><strong>K</strong>olaboratif</div>
-                </div>
-            </div>
-
-            <!-- Baris 5: Informasi Kantor Branch -->
-            <div class="info-cards-row">
-                <div class="info-mini-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Wilayah Operasional</h4>
-                        <p>Kabupaten Sidoarjo &amp; Sekitarnya (Witel Sidoarjo — Regional V Jatim)</p>
-                    </div>
-                </div>
-                <div class="info-mini-card">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <h4>Jam Operasional</h4>
-                        <p>Senin – Jumat (08.00 – 17.00 WIB) | Tim Siaga Gangguan 24 Jam</p>
-                    </div>
-                </div>
-                <div class="info-mini-card">
-                    <i class="fas fa-headset"></i>
-                    <div>
-                        <h4>Pusat Koordinasi</h4>
-                        <p>Posko Operasional &amp; Helpdesk Telkom Akses Branch Sidoarjo</p>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>&copy; 2026 PT Telkom Akses — Branch Sidoarjo. All Rights Reserved.</p>
-    </footer>
+        <!-- BUILDING RIGHT -->
+        <div class="hero-visual">
 
-    <script src="script.js"></script>
+            <div class="visual-top-label">
+                <span class="visual-label-mark"></span>
+                CONNECTIVITY FOR THE FUTURE
+            </div>
+
+            <div class="visual-index">
+                01 <span></span> 03
+            </div>
+
+            <div class="building-frame">
+                <img src="gedung-telkom.jpg"
+                     alt="Gedung Telkom Indonesia">
+            </div>
+
+            <div class="visual-caption">
+
+                <div>
+                    <span class="caption-overline">
+                        OUR COMMITMENT
+                    </span>
+
+                    <strong>
+                        Reliable Network.<br>
+                        Better Connection.
+                    </strong>
+                </div>
+
+                <span class="caption-arrow">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BOTTOM LINE -->
+    <div class="hero-bottomline">
+
+        <span class="bottomline-rule"></span>
+
+        <span>THE WORLD IN YOUR HAND</span>
+
+        <span class="bottomline-note">
+            PT TELKOM AKSES — BRANCH SIDOARJO
+        </span>
+
+    </div>
+
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="dashboard-wrapper">
+
+    <div class="dashboard-banner">
+
+        <div class="batik-dark-bg"></div>
+
+        <div class="banner-content">
+
+            <div class="banner-text">
+
+                <span class="banner-kicker">
+                    SISTEM TERINTEGRASI
+                </span>
+
+                <h2>
+                    Integrated Operational<br>
+                    Monitoring &amp; Performance<br>
+                    Dashboard
+                </h2>
+
+            </div>
+
+            <div class="banner-action">
+
+                <span class="eksplore-text">
+                    EKSPLORE
+                </span>
+
+                <a href="#" class="btn-dashboard-pill"
+                   onclick="klikDashboard(event)">
+
+                    DASHBOARD
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="floating-telkom-svg">
+
+            <svg viewBox="0 0 210 200"
+                 xmlns="http://www.w3.org/2000/svg">
+
+                <path d="M88,78 C76,38 98,14 112,48 C120,10 148,8 144,52 C164,16 190,28 168,68 C195,52 210,76 178,98 C204,104 198,130 160,126 C135,140 95,128 88,78 Z"
+                      fill="#EE2E24"/>
+
+                <circle cx="84" cy="126" r="52"
+                        fill="none"
+                        stroke="#6D6E71"
+                        stroke-width="25"/>
+
+                <path d="M84,74 A52,52 0 0,1 134,112"
+                      fill="none"
+                      stroke="#FFFFFF"
+                      stroke-width="25"/>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+
+    <div class="about-container">
+
+        <div class="about-header">
+
+            <span class="sub-badge">
+                PROFIL PERUSAHAAN
+            </span>
+
+            <h2>
+                Tentang Telkom Akses Branch Sidoarjo
+            </h2>
+
+            <p class="about-lead">
+                Ujung tombak pembangunan dan pengelolaan
+                infrastruktur jaringan broadband fiber optik
+                untuk mendukung konektivitas digital di
+                Kabupaten Sidoarjo.
+            </p>
+
+            <div class="red-divider"></div>
+
+        </div>
+
+        <div class="vm-grid">
+
+            <div class="about-box">
+
+                <div class="box-title">
+
+                    <div class="icon-circle">
+                        <i class="fas fa-eye"></i>
+                    </div>
+
+                    <h3>Visi Perusahaan</h3>
+
+                </div>
+
+                <p>
+                    Menjadi perusahaan penyedia layanan konstruksi
+                    dan pengelolaan infrastruktur jaringan akses
+                    telekomunikasi terdepan, terpercaya, dan
+                    berstandar global di wilayah Sidoarjo
+                    dan sekitarnya.
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+                <div class="box-title">
+
+                    <div class="icon-circle">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+
+                    <h3>Misi Perusahaan</h3>
+
+                </div>
+
+                <ul>
+
+                    <li>
+                        Menghadirkan layanan pemasangan dan
+                        pemeliharaan jaringan fiber optik yang
+                        cepat, handal, dan berkualitas tinggi.
+                    </li>
+
+                    <li>
+                        Mendukung percepatan transformasi digital
+                        bagi pelanggan ritel, UMKM, hingga kawasan
+                        industri di Sidoarjo.
+                    </li>
+
+                    <li>
+                        Mengembangkan sumber daya manusia teknisi
+                        yang profesional dan mengutamakan
+                        keselamatan kerja (K3).
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="about-box history-box">
+
+            <div class="box-title">
+
+                <div class="icon-circle maroon-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+
+                <h3>
+                    Sejarah &amp; Peran Strategis Branch Sidoarjo
+                </h3>
+
+            </div>
+
+            <p>
+                PT Telkom Akses merupakan anak perusahaan
+                PT Telkom Indonesia (Persero) Tbk yang berfokus
+                pada penyediaan layanan konstruksi pembangunan
+                dan pengelolaan infrastruktur jaringan.
+                Kehadiran <strong>Branch Sidoarjo</strong>
+                berperan strategis dalam mengawal perluasan
+                jaringan akses berbasis fiber optik guna
+                memenuhi kebutuhan konektivitas di kawasan
+                industri, perumahan, dan pusat pemerintahan
+                Kabupaten Sidoarjo.
+            </p>
+
+        </div>
+
+        <div class="info-cards-row">
+
+            <div class="info-mini-card">
+
+                <i class="fas fa-map-marker-alt"></i>
+
+                <div>
+                    <h4>Wilayah Operasional</h4>
+                    <p>Kabupaten Sidoarjo &amp; Sekitarnya (Witel Sidoarjo)</p>
+                </div>
+
+            </div>
+
+            <div class="info-mini-card">
+
+                <i class="fas fa-clock"></i>
+
+                <div>
+                    <h4>Jam Operasional</h4>
+                    <p>Senin – Jumat (08.00 – 17.00 WIB) | Siaga 24/7</p>
+                </div>
+
+            </div>
+
+            <div class="info-mini-card">
+
+                <i class="fas fa-headset"></i>
+
+                <div>
+                    <h4>Pusat Koordinasi</h4>
+                    <p>Posko Helpdesk Operasional Branch Sidoarjo</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <p>
+        &copy; 2026 PT Telkom Akses — Branch Sidoarjo.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
